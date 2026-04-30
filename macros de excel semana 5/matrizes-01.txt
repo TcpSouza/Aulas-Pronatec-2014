@@ -1,0 +1,93 @@
+Os conceitos Matemáticos
+
+Eu particularmente gosto de matemática , e, creio que todo bom programador também deve gostar , afinal conceitos matemáticos estão intimamente relacionados com a arte de programar. Assim o conceito de matrizes é fundamental para qualquer programador. Vamos então recordar os conceitos aprendidos na escola.
+
+a-) O que é uma matriz ?
+
+Matriz de ordem m x n : Para os nossos propósitos, podemos considerar uma matriz como sendo uma tabela rectangular de números reais (ou complexos) dispostos em m linhas e n colunas. Diz-se então que a matriz tem ordem m x n (lê-se: ordem m por n)
+
+Exemplos:
+
+A = ( 1 0 2 -4 5) Uma linha e cinco colunas ( matriz de ordem 1 por 5 ou 1 x 5)
+
+
+
+B é uma matriz de quatro linhas e uma coluna, portanto de ordem 4 x 1.
+
+Notas:
+
+1) se m = n , então dizemos que a matriz é quadrada de ordem n.
+
+Exemplo:
+
+
+
+A matriz X é uma matriz quadrada de ordem 3x3 , dita simplesmente de ordem 3 .
+
+2) Uma matriz A de ordem m x n , pode ser indicada como A = (aij )mxn , onde aij é um elemento da linha i e coluna j da matriz.
+
+Assim , por exemplo , na matriz X do exemplo anterior , temos a23 = 2 , a31 = 4 , a33 = 3 , a31 = 4 , a3,2 = 5 ,
+
+Vamos ver a seguir o conceito de produto de matrizes.
+
+b-) Produto de matrizes
+
+Para que exista o produto de duas matrizes A e B , o número de colunas de A , tem de ser igual ao número de linhas de B.
+
+Amxn x Bnxq = Cmxq
+
+Se a matriz A tem ordem m x n e a matriz B tem ordem n x q , a matriz produto C tem ordem m x q .
+
+Vamos mostrar o produto de matrizes com um exemplo:
+
+
+
+Onde L1C1 é o produto escalar dos elementos da linha 1 da 1ª matriz pelos elementos da coluna1 da segunda matriz, obtido da seguinte forma:
+
+L1C1 = 3.2 + 1.7 = 13. Analogamente, teríamos para os outros elementos:
+L1C2 = 3.0 + 1.5 = 5
+L1C3 = 3.3 + 1.8 = 17
+L2C1 = 2.2 + 0.7 = 4
+L2C2 = 2.0 + 0.5 = 0
+L2C3 = 2.3 + 0.8 = 6
+L3C1 = 4.2 + 6.7 = 50
+L3C2 = 4.0 + 6.5 = 30
+L3C3 = 4.3 + 6.8 = 60, e, portanto, a matriz produto será igual a:
+
+
+
+Observe que o produto de uma matriz de ordem 3x2 por outra 2x3, resultou na matriz produto P de ordem 3x3.
+
+Nota: O produto de matrizes é uma operação não comutativa, ou seja: A x B # B x A
+
+c-) Soma e Subtração de matrizes
+
+Com os conceitos acima creio que não precisarei entrar em mais detalhes , assim , para que a operação de adição e subtração entre duas matrizes seja possível , elas devem ser da mesma ordem , ou seja, deverá possuir o mesmo número de linhas e de colunas.
+
+Assim se a ordem da matriz A for m x n e a da matriz B p x q , para que a soma seja possível teremos que ter m=p e n=q.
+
+A soma ou subtração entre duas matrizes é realizada entre a soma dos elementos da linha 1 da 1ª matriz pelos elementos da linha 1 da segunda matriz e assim sucessivamente.
+
+Resumindo temos que A soma de duas matrizes A e B, ambas de ordem m x n, é uma matriz C de mesma ordem, em que cada elemento é a soma dos elementos correspondentes em A e B.
+
+d-) Produto escalar de um número por uma matriz
+
+Multiplicar uma matriz A por um número "k" é obter uma matriz B de mesma ordem de A, formada pelos elementos de a multiplicados por k.
+
+VB - Matrizes
+
+Vou aproveitar a oportunidade para recordar alguns dos conceitos sobre 'arrays' no VB. Vamos lá...
+
+No VB uma 'array' ( matriz ou arranjo) faz referência a um conjunto de variáveis de mesmo nome que identificamos por um indíce numérico com um limite inicial e um final. Todos os elementos da matriz possui o mesmo tipo de dados. Um 'array' pode ter um tamanho fixo ou pode variar dinamicamente.
+
+Um 'array' de tamanho fixo é criado usando o comando Dim usando a seguinte sintaxe: Dim NomeMatriz(indice)
+
+Ex: Dim Matriz(5) - A matriz terá os elementos : Matriz(0), Matriz(1), Matriz(2) , Matriz(3) , Matriz(4)
+
+Geralmente o índice inicial é zero ( podemos alterar isto usando o comando Option Base 1 no módulo da aplicação) , mas podemos definir o índice incial e final na declaração do array: Dim Matriz( 1 to 20).
+
+Para criar uma matriz dinâmica basta declarar a matriz sem definir os limites: ex: Dim Matriz()
+
+Em seguida , quando precisar , basta redimensionar a matriz usando o comando Redim. Ex: Redim Matriz(20)
+
+O comando Redim todos os valores armazenados na matriz são perdidos , se quiser , manter os valores já atribuídos ao array deve usar a cláusula : Preserve. Ex: Redim Preserve Matriz(20)
