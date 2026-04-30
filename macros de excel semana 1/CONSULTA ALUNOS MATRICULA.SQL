@@ -1,0 +1,1 @@
+select aluno!codigo,aluno!nome,curso!codigo,curso!nome,matricula!codigoa,matricula!codigoc FROM ALUNO,CURSO,MATRICULA where ((aluno![CODIGO]=matricula![CODIGOA]) and                                (curso![CODIGO]=matricula![CODIGOC]));                                                    
