@@ -1,0 +1,22 @@
+EditTransDeleteRecord:
+ IF Maximus = 1 THEN
+  BEEP
+ ELSE
+  CurrRecord = CurrTopLine + CurrRow - 1
+  MaxReg = MaxReg - 1
+  a = Reg(CurrRecord)
+  WHILE a <= MaxReg
+   GET #2, a + 2, Kword
+   PUT #2, a + 1, Kword
+   a = a + 1
+  WEND
+  Crg.Vl = "THISISVALID"
+  Crg.Mx = LTRIM$(RTRIM$(STR$(MaxReg)))
+  Crg.Iob = 0
+  PUT #2, 1, Crg
+  GOSUB CalcMatriz
+  GOSUB EditTransPrintWholeScreen
+  GOSUB EditTransGetLine
+ END IF
+ RETURN
+
